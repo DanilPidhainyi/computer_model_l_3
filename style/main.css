@@ -1,0 +1,180 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Bradley Hand, cursive;
+}
+
+.scheme {
+    position: relative;
+    width: 1149px;
+    height: 400px;
+}
+
+.img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.input-base {
+    width: 51px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 25px;
+    color: #000000;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    padding: 0 0 0 10px;
+    background: #84ffa1;
+    font-size: 22px;
+}
+
+.text--time-limit {
+    top: 0px;
+    left: 100px;
+}
+
+.text--delay {
+    top: 0px;
+    right: -30px;
+}
+
+.input-time {
+    width: 80px;
+    height: max-content;
+    background: #c384ff;
+}
+
+.input--delay {
+    width: 80px;
+    height: max-content;
+    background: #c384ff;
+}
+
+.input {
+    background: #c384ff;
+}
+
+.output {
+    background: #ff6464;
+}
+
+.output_all {
+    background: #ffb544;
+}
+
+
+.input--A {
+    position: absolute;
+    top: 220px;
+    left: 202px;
+}
+
+.input--N1 {
+    position: absolute;
+    top: 229px;
+    left: 500px;
+}
+
+.input--L {
+    position: absolute;
+    top: 257px;
+    left: 732px;
+}
+
+.input--N2 {
+    position: absolute;
+    top: 327px;
+    left: 932px;
+}
+
+.output--res {
+    position: absolute;
+    top: 135px;
+    right: -30px;
+}
+
+.output--NOT {
+    position: absolute;
+    top: 10px;
+    left: 580px;
+}
+
+.output--LIST_1_all {
+    position: absolute;
+    top: 70px;
+    left: 330px;
+}
+
+.output--LIST_1_now {
+    position: absolute;
+    top: 230px;
+    left: 330px;
+}
+
+.output--LIST_2_all {
+    position: absolute;
+    top: 70px;
+    left: 750px;
+}
+
+.output--LIST_2_now {
+    position: absolute;
+    top: 220px;
+    left: 750px;
+}
+
+.output--input-num {
+    position: absolute;
+    top: 150px;
+    left: 110px;
+}
+
+.output--K1 {
+    position: absolute;
+    top: 70px;
+    left: 490px;
+}
+
+.output--K2 {
+    position: absolute;
+    top: 70px;
+    left: 905px;
+}
+
+.output--K3 {
+    position: absolute;
+    top: 200px;
+    left: 907px;
+}
+
+.calc-btn {
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    position: absolute;
+    top: 350px;
+    left: 500px;
+    background: #3be37e;
+    color: #000000;
+    font-family: Comic Sans, cursive;
+}
+
+.calc-btn:hover {
+    box-shadow: 0 0 5px 3px  #12fd70;
+}
