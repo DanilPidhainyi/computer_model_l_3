@@ -1,3 +1,13 @@
+const genExpDist = a => {
+    let sum = 0
+    return () => {
+        sum += -(a) * Math.log(Math.random())
+        let res = parseInt(sum)
+        sum = sum % 1
+        return res
+    }
+}
+
 const setInputNam = inputNam => {
     const delay = +document.getElementById('delay').value
     if (delay) {
@@ -26,25 +36,27 @@ const addNot = item => {
 const addRes = item => {
     document.getElementById('res').value = +document.getElementById('res').value + item
 }
+const addLIST_1_now = sum => {
+    if (sum > 0) {
+        document.getElementById('LIST_1_now').value = +document.getElementById('LIST_1_now').value + sum
+    }
+}
 const getList1 = () => +document.getElementById('LIST_1_all').value
 const setList1 = item => {
+    addLIST_1_now(item - getList1())
     document.getElementById('LIST_1_all').value = item
+}
+const addLIST_2_now = sum => {
+    if (sum > 0) {
+        document.getElementById('LIST_2_now').value = +document.getElementById('LIST_2_now').value + sum
+    }
 }
 const getList2 = () => +document.getElementById('LIST_2_all').value
 const setList2 = item => {
+    addLIST_2_now(item - getList2())
     document.getElementById('LIST_2_all').value = item
 }
 
-
-const genExpDist = a => {
-    let sum = 0
-    return () => {
-        sum += -(a) * Math.log(Math.random())
-        let res = parseInt(sum)
-        sum = sum % 1
-        return res
-    }
-}
 
 
 document.getElementById('calc').onclick = () => {
