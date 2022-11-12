@@ -65,9 +65,16 @@ document.getElementById('calc').onclick = () => {
     let getMaxProcessK2 = genExpDist(+document.getElementById('N2').value)
     let getMaxProcessK3 = genExpDist(+document.getElementById('N2').value)
 
+    let isBlock = false;
+
     const processK1 = inputNam => {
         const allNum = getList1() + inputNam + getK1()
         let maxProcess = getMaxProcessK1()
+
+        if (isBlock) {
+            setList1(getList1() + inputNam)
+            return 0
+        }
 
         if (allNum === 0) {
             // зупинка обробки K
@@ -86,26 +93,21 @@ document.getElementById('calc').onclick = () => {
         return maxProcess
     }
 
-    const processK1Block = inputNam => {
-        setList1(getList1() + inputNam)
-        return 0
-    }
 
     const processList2 = (nums) => {
         const L = +document.getElementById('L').value
-        if (nums < L) {
+        if (nums <= L) {
             setList2(nums)
             return true
         }
 
         setList2(L)
+        isBlock = true
         addNot(nums - L)
+        setK1(getK1() + nums - L)
         return false
     }
 
-    const isBlocking = () => {
-        return +document.getElementById('L').value === getList2()
-    }
 
     const processK2_3 = inputNam => {
         const allNums = getList2() + inputNam + getK2() + getK3()
@@ -126,6 +128,7 @@ document.getElementById('calc').onclick = () => {
             setK2(0)
             setK3(0)
             addRes(allNums)
+            isBlock = false
             return true
         }
 
@@ -133,6 +136,7 @@ document.getElementById('calc').onclick = () => {
             setK2(1)
             setK3(0)
             addRes(maxProcess)
+            isBlock = false
             return true
         }
 
@@ -145,10 +149,6 @@ document.getElementById('calc').onclick = () => {
 
     const mainProcess = inputNam => {
         setInputNam(inputNam)
-        if (isBlocking()) {
-            return processK2_3(processK1Block(inputNam))
-        }
-
         processK2_3(processK1(inputNam))
     }
 

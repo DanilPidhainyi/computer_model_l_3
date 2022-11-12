@@ -54,6 +54,17 @@ body {
     right: -30px;
 }
 
+.text--not {
+    top: 10px;
+    left: 518px;
+}
+
+.output--NOT {
+    /*position: absolute;*/
+    /*top: 10px;*/
+    /*left: 600px;*/
+}
+
 .input-time {
     width: 80px;
     height: max-content;
@@ -109,11 +120,7 @@ body {
     right: -30px;
 }
 
-.output--NOT {
-    position: absolute;
-    top: 10px;
-    left: 580px;
-}
+
 
 .output--LIST_1_all {
     position: absolute;
